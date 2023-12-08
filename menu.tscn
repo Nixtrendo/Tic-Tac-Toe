@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpod5dbc7ptkv"]
+
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_p8fgj"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_p8fgj")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 600.0
+offset_bottom = 1024.0
+size_flags_horizontal = 4
+size_flags_vertical = 6
+
+[node name="Username" type="TextEdit" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.5
+offset_top = -204.5
+offset_right = 149.5
+offset_bottom = -141.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.5
+offset_top = -22.0
+offset_right = 117.5
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start searching for opponent"
+
+[connection signal="pressed" from="Panel/StartButton" to="." method="_on_start_button_pressed"]
